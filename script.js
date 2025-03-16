@@ -24,13 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         
         
-        fetch("http://localhost:3000/calculate-risk", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(requestData)
-        })
+        fetch("health-back-end.azurewebsites.net", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(requestData)
+})
+
         .then(response => response.json())
         .then(data => {
             const resultDiv = document.getElementById("result");

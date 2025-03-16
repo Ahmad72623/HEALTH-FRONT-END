@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         
         
-        fetch("health-back-end.azurewebsites.net", {
+        fetch("https://HEALTH-BACK-END.azurewebsites.net/api/calculateRisk", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"

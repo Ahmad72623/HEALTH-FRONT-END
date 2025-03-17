@@ -23,15 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
             familyHistory
         };
         
-        
-        fetch("https://HEALTH-BACK-END.azurewebsites.net/api/calculateRisk", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(requestData)
-})
-
+        // Updated URL for Azure Backend
+        fetch("https://health-risk-api-a2b7e3fjcnatcffm.uaenorth-01.azurewebsites.net/calculateRisk", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(requestData)
+        })
         .then(response => response.json())
         .then(data => {
             const resultDiv = document.getElementById("result");
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred while processing the request.");
         });
     });
-    
+
     // Dark Mode Toggle Functionality
     const darkModeToggle = document.getElementById("dark-mode-toggle");
     const body = document.body;
